@@ -44,7 +44,7 @@ async function sendEmail(answers, summary) {
     body: JSON.stringify({
       // onboarding@resend.dev works out of the box and can deliver to the
       // email you signed up with — no domain verification needed.
-      from: "Entrevista Zapato Feroz <onboarding@resend.dev>",
+      from: "Entrevista Zapato Feroz <master@joca.dev>",
       to: [to],
       subject: `Nueva entrevista — ${answers.nombre || "anónimo"}`,
       text: summary,

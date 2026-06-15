@@ -2,6 +2,7 @@ node_modules/
 .vercel
 .env
 .env*.local
+vercel-env.txt
 .DS_Store
 
 # Datos de investigación (no van al repo: contienen datos personales)
