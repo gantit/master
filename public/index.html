@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrevista · Calzado infantil (Zapato Feroz)</title>
+<style>
+  :root{
+    --rojo:#c00000; --rojo-soft:#f2dcdb; --tinta:#1a1a1a; --gris:#6b6b6b;
+    --linea:#e2e2e2; --bg:#f6f5f4; --card:#ffffff; --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tinta);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;padding:0 0 60px}
+  header{background:var(--rojo);color:#fff;padding:26px 20px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+  header h1{margin:0 0 6px;font-size:1.45rem}
+  header p{margin:0;opacity:.92;font-size:.95rem}
+  .card{background:var(--card);border:1px solid var(--linea);border-radius:var(--radius);
+    padding:20px;margin:18px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .card h2{margin:0 0 4px;font-size:1.12rem;color:var(--rojo)}
+  .card .sub{margin:0 0 14px;color:var(--gris);font-size:.9rem}
+  label{display:block;font-weight:600;margin:14px 0 5px;font-size:.95rem}
+  .hint{font-weight:400;color:var(--gris);font-size:.85rem;margin:2px 0 7px}
+  input[type=text],input[type=number],textarea,select{
+    width:100%;padding:11px 12px;border:1px solid var(--linea);border-radius:10px;
+    font:inherit;background:#fff;color:var(--tinta);resize:vertical}
+  textarea{min-height:90px}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--rojo);border-color:var(--rojo)}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .row > div{flex:1;min-width:160px}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+    background:var(--rojo);color:#fff;border-radius:50%;font-size:.85rem;margin-right:8px;flex:0 0 auto}
+  .dimtitle{display:flex;align-items:center}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  button{font:inherit;font-weight:600;border:none;border-radius:10px;padding:13px 18px;cursor:pointer}
+  .primary{background:var(--rojo);color:#fff}
+  .primary:hover{background:#a30000}
+  .primary:disabled{opacity:.6;cursor:default}
+  .note{background:var(--rojo-soft);border-radius:10px;padding:12px 14px;font-size:.88rem;color:#7a1414}
+  .saved{font-size:.82rem;color:var(--gris);margin-top:10px;min-height:18px}
+  .error{color:#7a1414;font-size:.9rem;margin-top:10px;min-height:18px}
+  footer{max-width:760px;margin:0 auto;padding:14px 16px;color:var(--gris);font-size:.8rem;text-align:center}
+  .ok{display:none;text-align:center;padding:26px}
+  .ok h2{color:var(--rojo)}
+  @media(max-width:480px){header h1{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Entrevista: ¿cómo eliges el calzado infantil?</h1>
+    <p>5 minutos · Tus respuestas me ayudan con un trabajo del máster sobre la marca Zapato Feroz. ¡Gracias!</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <form id="form">
+
+    <div class="card">
+      <p class="note">No hay respuestas correctas ni incorrectas: me interesa tu experiencia real.
+      Cuando termines, solo pulsa <b>Enviar</b>. Nada más.</p>
+      <label>Tu nombre o apodo</label>
+      <input type="text" name="nombre" required>
+      <div class="row">
+        <div>
+          <label>Edad</label>
+          <input type="number" name="edad" min="0" max="120">
+        </div>
+        <div>
+          <label>¿Tienes peques cerca?</label>
+          <select name="perfil">
+            <option value="">Selecciona…</option>
+            <option>Soy madre/padre</option>
+            <option>Abuelo/a, tío/a u otro familiar</option>
+            <option>Compro/regalo calzado infantil</option>
+            <option>Profesional (pediatra, fisio, podólogo…)</option>
+            <option>Sin hijos, pero me interesa el tema</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">1</span>¿Qué VES a tu alrededor?</span></h2>
+      <p class="sub">Tu entorno, qué oferta encuentras, qué hacen otras familias.</p>
+      <label>Cuéntame</label>
+      <p class="hint">¿Dónde miras al buscar zapatos para un niño (tiendas, webs, redes)? ¿Qué compra la mayoría
+      de la gente de tu entorno? ¿Has visto marcas de calzado "respetuoso" o "barefoot"?</p>
+      <textarea name="d1_ve"></textarea>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">2</span>¿Qué ESCUCHAS?</span></h2>
+      <p class="sub">Influencias: familia, amigos, profesionales, redes.</p>
+      <label>Cuéntame</label>
+      <p class="hint">¿Quién te aconseja y qué te dice? ¿Has oído a pediatras o fisios hablar del calzado infantil?
+      ¿Sigues cuentas de crianza o maternidad?</p>
+      <textarea name="d2_escucha"></textarea>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">3</span>¿Qué PIENSAS y SIENTES?</span></h2>
+      <p class="sub">Preocupaciones, deseos y emociones.</p>
+      <label>Cuéntame</label>
+      <p class="hint">¿Qué es lo más importante para ti al elegir su calzado y por qué? ¿Qué te preocupa o te genera
+      dudas? ¿Cuánta importancia das a que sea sostenible, vegano o de materiales sanos?</p>
+      <textarea name="d3_piensa"></textarea>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">4</span>¿Qué DICES y HACES?</span></h2>
+      <p class="sub">Tu comportamiento real de compra.</p>
+      <label>Cuéntame</label>
+      <p class="hint">¿Cómo compras normalmente (online, en tienda, lo decides solo/a)? ¿Cuánto investigas antes?
+      ¿Cuánto pagarías por unos zapatos infantiles de mucha calidad?</p>
+      <textarea name="d4_hace"></textarea>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">5</span>Tus ESFUERZOS (frustraciones)</span></h2>
+      <p class="sub">Lo que te cuesta, te molesta o te frena.</p>
+      <label>Cuéntame</label>
+      <p class="hint">¿Qué es lo más frustrante de comprar calzado infantil hoy? Zapato Feroz vende casi todo por
+      web, con preventa y "cola virtual" porque se agota: ¿qué te parecería tener que esperar en una cola para
+      poder comprar? ¿Has tenido que devolver algo comprado online? ¿Cómo fue?</p>
+      <textarea name="d5_esfuerzos"></textarea>
+    </div>
+
+    <div class="card">
+      <h2><span class="dimtitle"><span class="num">6</span>¿Qué RESULTADOS esperas?</span></h2>
+      <p class="sub">Qué consideras un éxito; qué buscas conseguir.</p>
+      <label>Cuéntame</label>
+      <p class="hint">Si encontraras el calzado infantil "perfecto", ¿cómo sería? ¿Qué tendría que pasar para que
+      recomendaras una marca a otros padres? ¿Qué te haría sentir que has acertado con la compra?</p>
+      <textarea name="d6_resultados"></textarea>
+    </div>
+
+    <div class="card">
+      <label>¿Algo más que quieras añadir? (opcional)</label>
+      <textarea name="extra"></textarea>
+      <div class="btns">
+        <button type="submit" class="primary" id="enviar">✉️ Enviar respuestas</button>
+      </div>
+      <div class="saved" id="saved"></div>
+      <div class="error" id="error"></div>
+    </div>
+  </form>
+
+  <div class="ok card" id="ok">
+    <h2>¡Gracias! 🙌</h2>
+    <p>Tus respuestas se enviaron correctamente. No tienes que hacer nada más.</p>
+  </div>
+</div>
+
+<footer>
+  Hecho para un trabajo de máster · Tus datos solo se usan para este estudio. Puedes cerrar sin enviar cuando quieras.
+</footer>
+
+<script>
+  var CLAVE = "zapatoferoz_entrevista_v1";
+
+  var form = document.getElementById('form');
+  var savedEl = document.getElementById('saved');
+  var errorEl = document.getElementById('error');
+  var btn = document.getElementById('enviar');
+
+  function datos(){
+    var d = {};
+    new FormData(form).forEach(function(v,k){ d[k] = v; });
+    return d;
+  }
+
+  // ---- Autoguardado local (para no perder lo escrito) ----
+  function guardarLocal(){
+    try{
+      localStorage.setItem(CLAVE, JSON.stringify(datos()));
+      savedEl.textContent = "✔ Progreso guardado en este dispositivo · " + new Date().toLocaleTimeString('es-ES');
+    }catch(e){}
+  }
+  function restaurarLocal(){
+    try{
+      var raw = localStorage.getItem(CLAVE); if(!raw) return;
+      var d = JSON.parse(raw);
+      for (var k in d){ var el = form.elements[k]; if(el) el.value = d[k]; }
+    }catch(e){}
+  }
+  form.addEventListener('input', guardarLocal);
+  restaurarLocal();
+
+  // ---- Enviar al servidor ----
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorEl.textContent = "";
+
+    var d = datos();
+    if(!d.nombre || d.nombre.trim() === ""){
+      errorEl.textContent = "Pon tu nombre, por favor 🙂";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Enviando…";
+
+    fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(d)
+    })
+    .then(function(res){
+      if(!res.ok) throw new Error('bad response');
+      return res.json();
+    })
+    .then(function(){
+      try{ localStorage.removeItem(CLAVE); }catch(e){}
+      form.style.display = 'none';
+      document.getElementById('ok').style.display = 'block';
+      window.scrollTo({ top:0, behavior:'smooth' });
+    })
+    .catch(function(){
+      errorEl.textContent = "No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.";
+      btn.disabled = false;
+      btn.textContent = "✉️ Enviar respuestas";
+    });
+  });
+</script>
+</body>
+</html>

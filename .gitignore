@@ -1,0 +1,14 @@
+node_modules/
+.vercel
+.env
+.env*.local
+.DS_Store
+
+# Datos de investigación (no van al repo: contienen datos personales)
+ENTREVISTA MAPA*.md
+
+# Versión original autónoma (reemplazada por public/index.html)
+entrevista-mapa-empatia.html
+
+# Herramientas internas
+.atl/
